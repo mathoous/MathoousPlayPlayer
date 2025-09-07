@@ -370,20 +370,6 @@
     run().catch(handleError);
 
     
-document.addEventListener("DOMContentLoaded", () => {
-  // checa a cada 500ms se o TurboWarp já criou os <video>
-  setInterval(() => {
-    document.querySelectorAll("video").forEach(v => {
-      v.removeAttribute("controls"); // remove os botões de controle
-      v.style.display = "none"; // esconde do layout (não atrapalha o jogo)
-    });
-    
-    // também limpa a integração de mídia do navegador
-    if ('mediaSession' in navigator) {
-      navigator.mediaSession.metadata = null;
-    }
-  }, 500);
-});
 </script>
   </script>
 </body>
